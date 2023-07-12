@@ -1,0 +1,1 @@
+# rhle8-stig-hardening
