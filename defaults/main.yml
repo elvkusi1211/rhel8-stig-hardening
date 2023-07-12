@@ -643,7 +643,7 @@ rsyslog_encrypt_offload_actionsendstreamdrivermode: true
 rsyslog_encrypt_offload_defaultnetstreamdriver: true
 rsyslog_remote_access_monitoring: true
 rsyslog_remote_loghost: true
-security_patches_up_to_date: true
+security_patches_up_to_date: false
 selinux_policytype: true
 selinux_state: true
 service_auditd_enabled: true
