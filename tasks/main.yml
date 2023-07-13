@@ -14014,6 +14014,7 @@
     user: '{{ item }}'
     password_expire_max: '{{ var_accounts_maximum_age_login_defs }}'
   with_items: '{{ user_names.stdout_lines }}'
+  ignore_errors: true
   when:
   - DISA_STIG_RHEL_08_020210 | bool
   - accounts_password_set_max_life_existing | bool
