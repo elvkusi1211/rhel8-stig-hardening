@@ -13733,32 +13733,32 @@
   - low_severity
   - no_reboot_needed
 
-- name: Insert correct line into /etc/tmux.conf
-  lineinfile:
-    path: /etc/tmux.conf
-    create: null
-    regexp: \s*bind\s+\w\s+lock-session.*$
-    mode: '0644'
-    line: bind X lock-session
-    state: present
-  when:
-  - DISA_STIG_RHEL_08_020040 | bool
-  - configure_strategy | bool
-  - configure_tmux_lock_keybinding | bool
-  - low_complexity | bool
-  - low_disruption | bool
-  - low_severity | bool
-  - no_reboot_needed | bool
-  - ansible_virtualization_type not in ["docker", "lxc", "openvz", "podman", "container"]
-  tags:
-  - CCE-86135-1
-  - DISA-STIG-RHEL-08-020040
-  - configure_strategy
-  - configure_tmux_lock_keybinding
-  - low_complexity
-  - low_disruption
-  - low_severity
-  - no_reboot_needed
+#- name: Insert correct line into /etc/tmux.conf
+#  lineinfile:
+#    path: /etc/tmux.conf
+#    create: null
+#    regexp: \s*bind\s+\w\s+lock-session.*$
+#    mode: '0644'
+#    line: bind X lock-session
+#    state: present
+#  when:
+#  - DISA_STIG_RHEL_08_020040 | bool
+#  - configure_strategy | bool
+#  - configure_tmux_lock_keybinding | bool
+#  - low_complexity | bool
+#  - low_disruption | bool
+#  - low_severity | bool
+#  - no_reboot_needed | bool
+#  - ansible_virtualization_type not in ["docker", "lxc", "openvz", "podman", "container"]
+#  tags:
+#  - CCE-86135-1
+#  - DISA-STIG-RHEL-08-020040
+#  - configure_strategy
+#  - configure_tmux_lock_keybinding
+#  - low_complexity
+#  - low_disruption
+#  - low_severity
+#  - no_reboot_needed
 
 - name: Ensure opensc is installed
   package:
